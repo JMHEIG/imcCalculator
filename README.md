@@ -1,24 +1,29 @@
+````C++
 # Exercice de Programmation en C++ et Utilisation de Git
 
 ## Objectif
+
 L'objectif de cet exercice est d'écrire un programme en C++ qui calcule l'IMC (Indice de Masse Corporelle) d'une personne en fonction de son poids et de sa taille. Ensuite, vous utiliserez Git pour gérer le développement de votre programme. Vous apprendrez à cloner un dépôt, créer une branche, faire des commits, pousser vos changements et enfin faire un merge.
 
 ## Partie 1: Calcul de l'IMC en C++
 
 ### Instructions
+
 1. Écrire un programme en C++ qui demande à l'utilisateur d'entrer son **poids** (en kilogrammes) et sa **taille** (en mètres).
 
 2. Le programme doit ensuite calculer et afficher l'IMC à l'aide de la formule :
 
-    IMC = Poids / (Taille * Taille)
+   IMC = Poids / (Taille * Taille)
 
 3. Afficher également une interprétation du résultat :
+
 - **IMC < 18.5** : Poids insuffisant
 - **18.5 ≤ IMC < 25** : Poids normal
 - **25 ≤ IMC < 30** : Surpoids
 - **IMC ≥ 30** : Obésité
 
 ### Exemple de sortie
+
 ```bash
 Entrez votre poids (en kg) : 70
 Entrez votre taille (en mètres) : 1.75
@@ -39,12 +44,16 @@ Dans cette partie, vous allez utiliser Git pour gérer votre projet.
    git clone <URL_DU_DEPOT>
 
 2. **Créer une nouvelle branche de développement** Pour séparer vos modifications de la branche principale, créez une nouvelle branche :
+
 ``` bash
 git checkout -b develop
 ```
+
 3. **Coder votre programme en C++** Implémentez le code du calcul de l'IMC dans cette branche `develop`.
 
-4. **Ajouter et valider vos changements** Une fois votre code prêt, ajoutez vos fichiers et faites un commit :
+4. **Créer un fichier .gitignore** qui va permettre de mettre que les fichiers utiles au projet.
+
+5. **Ajouter et valider vos changements** Une fois votre code prêt, ajoutez vos fichiers et faites un commit :
 
 ```bash
 git add .	
@@ -52,9 +61,11 @@ git commit -m "Ajout du calcul de l'IMC"
 ```
 
 5. **Pousser les changements sur GitHub** Envoyez vos changements sur le dépôt distant :
+
 ```bash
 git push origin develop
 ```
+
 6. **Créer une Pull Request et merger** Une fois que vous avez poussé les changements, allez sur GitHub et créez une Pull Request pour fusionner la branche `develop` dans `main`. Après validation, mergez les branches.
 
 Alternativement, vous pouvez faire cela en ligne de commande :
@@ -77,24 +88,20 @@ git push origin main
 
 
 Solution code 
+
 ``` C++
 #include <iostream>
 using namespace std;
 
 int main() {
-    float poids, taille, imc;
+   float poids, taille, imc;
 
-    // Demande du poids et de la taille
-    cout << "Entrez votre poids (en kg) : ";
-    cin >> poids;
-    cout << "Entrez votre taille (en metres) : ";
-    cin >> taille;
+    // Demander du poids et de la taille
+	
+    // Calculer de l'IMC
 
-    // Calcul de l'IMC
-    imc = poids / (taille * taille);
-
-    // Affichage de l'IMC
-    cout << "Votre IMC est : " << imc << endl;
+    // Afficher de l'IMC
+    
 
     // Interprétation de l'IMC
     if (imc < 18.5) {
@@ -109,4 +116,5 @@ int main() {
 
     return 0;
 }
-```
+```xxxxxxxxxx #include <iostream>using namespace std;int main() {    float poids, taille, imc;    // Demande du poids et de la taille    cout << "Entrez votre poids (en kg) : ";    cin >> poids;    cout << "Entrez votre taille (en metres) : ";    cin >> taille;    // Calcul de l'IMC    imc = poids / (taille * taille);    // Affichage de l'IMC    cout << "Votre IMC est : " << imc << endl;    // Interprétation de l'IMC    if (imc < 18.5) {        cout << "Vous avez un poids insuffisant." << endl;    } else if (imc < 25) {        cout << "Vous avez un poids normal." << endl;    } else if (imc < 30) {        cout << "Vous êtes en surpoids." << endl;    } else {        cout << "Vous êtes en situation d'obésité." << endl;    }    return 0;}C++
+````
