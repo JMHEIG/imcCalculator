@@ -1,4 +1,3 @@
-````C++
 # Exercice de Programmation en C++ et Utilisation de Git
 
 ## Objectif
@@ -75,8 +74,11 @@ git checkout main
 git merge develop
 git push origin main
 ```
-
-
+7. **Créer un tag et le Push** Une fois que votre code est figée, vous allez créer un tag avec un numéro de version ainsi qu'un commentaire pour figer une release.
+ ```bash
+git tag -a V1.0.0 -m "comments"
+git push --tags
+```
 ## Résumé des commandes Git
 
 - `git clone <URL_DU_DEPOT>` : Cloner le dépôt Git sur votre machine.
@@ -85,23 +87,24 @@ git push origin main
 - `git commit -m "message"` : Créer un commit avec un message descriptif.
 - `git push origin <nom_branche>` : Pousser les changements de la branche sur le dépôt distant.
 - `git merge <nom_branche>` : Fusionner la branche spécifiée avec la branche courante.
+- `git tag -a <version> -m "message"` : Création d'un tag avec un numéro de version ainsi qu'un message descriptif.
 
-
-Solution code 
+## Exercice à réaliser 
 
 ``` C++
 #include <iostream>
 using namespace std;
 
-int main() {
-   float poids, taille, imc;
+int main()
+{
+   	unsigned poids, taille;
+	double imc;
 
-    // Demander du poids et de la taille
+    // Demander le poids et la taille
 	
-    // Calculer de l'IMC
+    // Calculer l'IMC
 
-    // Afficher de l'IMC
-    
+    // Afficher l'IMC
 
     // Interprétation de l'IMC
     if (imc < 18.5) {
@@ -116,5 +119,4 @@ int main() {
 
     return 0;
 }
-```xxxxxxxxxx #include <iostream>using namespace std;int main() {    float poids, taille, imc;    // Demande du poids et de la taille    cout << "Entrez votre poids (en kg) : ";    cin >> poids;    cout << "Entrez votre taille (en metres) : ";    cin >> taille;    // Calcul de l'IMC    imc = poids / (taille * taille);    // Affichage de l'IMC    cout << "Votre IMC est : " << imc << endl;    // Interprétation de l'IMC    if (imc < 18.5) {        cout << "Vous avez un poids insuffisant." << endl;    } else if (imc < 25) {        cout << "Vous avez un poids normal." << endl;    } else if (imc < 30) {        cout << "Vous êtes en surpoids." << endl;    } else {        cout << "Vous êtes en situation d'obésité." << endl;    }    return 0;}C++
-````
+```
