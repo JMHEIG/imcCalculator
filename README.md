@@ -78,7 +78,7 @@ git push origin main
  ```bash
 git tag -a V1.0.0 -m "comments"
 git push --tags
-```
+ ```
 ## Résumé des commandes Git
 
 - `git clone <URL_DU_DEPOT>` : Cloner le dépôt Git sur votre machine.
@@ -92,31 +92,31 @@ git push --tags
 ## Exercice à réaliser 
 
 ``` C++
-#include <iostream>
-using namespace std;
-
-int main()
+int main() 
 {
-   	unsigned poids, taille;
+	unsigned int poids, taille;						//poids en kg, taille en centimètres
 	double imc;
+	const double LIMITE_IMC_INFERIEUR 		= 18.5;
+	const unsigned int LIMITE_IMC_NORMAL 	= 25;
+	const unsigned int LIMITE_IMC_SURPOIDS 	= 30;
 
-    // Demander le poids et la taille
-	
-    // Calculer l'IMC
+	// Demandez le poids et la taille
+		
+	// Calculez l'IMC
 
-    // Afficher l'IMC
+	// Affichez l'IMC
 
-    // Interprétation de l'IMC
-    if (imc < 18.5) {
-        cout << "Vous avez un poids insuffisant." << endl;
-    } else if (imc < 25) {
-        cout << "Vous avez un poids normal." << endl;
-    } else if (imc < 30) {
-        cout << "Vous êtes en surpoids." << endl;
-    } else {
-        cout << "Vous êtes en situation d'obésité." << endl;
-    }
+	// Interprétation de l'IMC
+	if (imc < LIMITE_IMC_INFERIEUR) {
+		cout << "Vous avez un poids insuffisant." << endl;
+	} else if (imc < LIMITE_IMC_NORMAL) {
+		cout << "Vous avez un poids normal." << endl;
+	} else if (imc < LIMITE_IMC_SURPOIDS) {
+		cout << "Vous êtes en surpoids." << endl;
+	} else {
+		cout << "Vous êtes en situation d'obésité." << endl;
+	}
 
-    return 0;
+	return EXIT_SUCCESS;
 }
 ```
