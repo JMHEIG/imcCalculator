@@ -13,9 +13,9 @@ int main()
 {
 	unsigned int poids, taille;						//poids en kg, taille en centimètres
 	double imc;
-	const double LIMITE_IMC_INFERIEUR 		= 18.5;
-	const unsigned int LIMITE_IMC_NORMAL 	= 25;
-	const unsigned int LIMITE_IMC_SURPOIDS 	= 30;
+	const double LIMITE_IMC_INFERIEUR = 18.5;
+  	const double LIMITE_IMC_NORMAL    = 25.0;
+  	const double LIMITE_IMC_SURPOIDS  = 30.0;
 
 	// Demandez le poids et la taille
 		
